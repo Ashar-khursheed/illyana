@@ -6,6 +6,7 @@ import { ContactForm } from '../ContactForm';
 import { LogoMark } from '../Logo';
 import { ChatWidget } from '../chat/ChatWidget';
 import { LandingFx } from './LandingFx';
+import { HeroVisual, Showcase } from './Showcases';
 
 const pad = (n: number) => String(n).padStart(2, '0');
 
@@ -82,7 +83,7 @@ export function LandingPage({ l }: { l: Landing }) {
         <a href="#contact" className="btn btn--small" data-magnetic>Get a free plan</a>
       </header>
 
-      <main>
+      <main className={`lp lp--${l.variant}`}>
         {/* HERO */}
         <section className="lp-hero">
           <div className="lp-hero__copy">
@@ -96,18 +97,10 @@ export function LandingPage({ l }: { l: Landing }) {
             </div>
             <ul className="lp-proof reveal-up">{l.proof.map(p => <li key={p}>{p}</li>)}</ul>
           </div>
-          <aside className="lp-hero__card" aria-label="At a glance">
-            <span className="mono">Starting from</span>
-            <b>{formatUSD(from)}<small>{unit}</small></b>
-            <p>{l.priceNote}</p>
-            <ol>
-              {l.framework.phases.map((p, i) => (
-                <li key={p.title}><i>{pad(i + 1)}</i><span>{p.title}</span><em className="mono">{p.when}</em></li>
-              ))}
-            </ol>
-            <a href="#pricing" className="lp-link">Compare packages →</a>
-          </aside>
+          <HeroVisual variant={l.variant} from={`${formatUSD(from)}${unit}`} />
         </section>
+
+        <Showcase variant={l.variant} />
 
         {/* PAINS */}
         <section className="section lp-pains">

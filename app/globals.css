@@ -355,7 +355,7 @@ details p { color: var(--muted); padding: 0 56px 28px 0; max-width: 620px; }
 .footer { padding: 0 var(--gutter) 128px; overflow: hidden; }
 .footer__big { font-size: clamp(100px, 30vw, 520px); font-weight: 600; letter-spacing: -.08em; line-height: .78; text-align: center; color: var(--bg-2); -webkit-text-stroke: 1px var(--line); user-select: none; margin-bottom: 40px; }
 .footer__row { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 24px; color: var(--muted); }
-.footer__links { display: flex; gap: 24px; font-size: 14px; }
+.footer__links { display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 14px; }
 .footer__links a:hover, .totop:hover { color: var(--accent); }
 
 /* ---------- Initial states (only while JS animates) ---------- */

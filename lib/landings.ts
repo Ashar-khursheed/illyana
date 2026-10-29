@@ -2,8 +2,11 @@
  * Dedicated landing pages for ads and organic ranking. Each page targets one search intent
  * with its own strategy, timeline, KPIs, commitment and pricing — edit the copy here.
  */
+export type Variant = 'website' | 'mobile' | 'brand' | 'marketing' | 'store';
+
 export type Landing = {
   slug: string;
+  variant: Variant;
   nav: string;
   keyword: string;
   metaTitle: string;
@@ -28,6 +31,7 @@ export type Landing = {
 export const landings: Landing[] = [
   {
     slug: 'branding-agency',
+    variant: 'brand',
     nav: 'Branding',
     keyword: 'branding agency',
     metaTitle: 'Branding Agency — Brand Strategy, Logo & Identity Design',
@@ -96,6 +100,7 @@ export const landings: Landing[] = [
 
   {
     slug: 'digital-marketing-agency',
+    variant: 'marketing',
     nav: 'Digital marketing',
     keyword: 'digital marketing agency',
     metaTitle: 'Digital Marketing Agency — SEO, Google & Meta Ads That Bring Leads',
@@ -164,6 +169,7 @@ export const landings: Landing[] = [
 
   {
     slug: 'ecommerce-marketing-agency',
+    variant: 'store',
     nav: 'E-commerce marketing',
     keyword: 'ecommerce marketing agency',
     metaTitle: 'E-commerce Marketing Agency — More Sales, Higher ROAS, Repeat Customers',
@@ -232,6 +238,7 @@ export const landings: Landing[] = [
 
   {
     slug: 'website-development-company',
+    variant: 'website',
     nav: 'Website development',
     keyword: 'website development company',
     metaTitle: 'Website Development Company — Fast, SEO-Ready Websites at a Fixed Price',
@@ -298,5 +305,74 @@ export const landings: Landing[] = [
     cta: { title: 'Let’s build a website that works as hard as you.', sub: 'Book a free call — get a blueprint and fixed price for your website within 48 hours.' },
   },
 ];
+
+landings.push({
+  slug: 'mobile-app-development-company',
+  variant: 'mobile',
+  nav: 'Mobile apps',
+  keyword: 'mobile app development company',
+  metaTitle: 'Mobile App Development Company — iOS & Android Apps at a Fixed Price',
+  metaDescription: 'iOS and Android apps from one codebase with React Native or Flutter. Fixed price from $3,000, launch in 8–16 weeks, App Store & Play Store submission included, 30-day warranty.',
+  eyebrow: 'iOS & Android app development',
+  h1: 'Your app in their pocket',
+  h1Accent: '— on iPhone and Android.',
+  sub: 'One codebase, two stores, zero guesswork. We design, build and launch native-quality apps people keep on their home screen — and we stay to grow them after launch.',
+  proof: ['Fixed price from $3,000', 'iOS + Android, one codebase', 'Store launch included'],
+  pains: [
+    { title: 'Two apps, double the cost', body: 'Building separate iOS and Android apps doubles the budget and the bugs. Most businesses only need one high-quality cross-platform codebase.' },
+    { title: 'Rejected by the App Store', body: 'Store guidelines, privacy labels and review delays stop many apps at the finish line. One rejection can cost weeks.' },
+    { title: 'Downloaded once, deleted forever', body: 'Without onboarding, push strategy and analytics, most installs never become active users.' },
+  ],
+  framework: {
+    name: 'The ilyana App Launchpad',
+    intro: 'From idea to a 5-star listing in four stages — with a TestFlight build on your phone every single week.',
+    phases: [
+      { when: 'Weeks 1–2', title: 'Discover & validate', actions: ['User journeys and feature priorities', 'MVP scope that ships fast', 'Tech choice: React Native or Flutter'], deliverable: 'App blueprint + fixed quote' },
+      { when: 'Weeks 2–4', title: 'Design the experience', actions: ['UX flows and clickable prototype', 'iOS & Android native patterns', 'Onboarding that converts installs to users'], deliverable: 'Tested prototype' },
+      { when: 'Weeks 4–12', title: 'Build & test weekly', actions: ['Cross-platform build with backend & APIs', 'Payments, push notifications, analytics', 'Weekly TestFlight / Play test builds'], deliverable: 'Release candidate' },
+      { when: 'Weeks 12–16', title: 'Launch & grow', actions: ['App Store & Play Store submission', 'Store listing (ASO) and screenshots', 'Crash monitoring and first-month updates'], deliverable: 'Live app in both stores' },
+    ],
+  },
+  deliverables: ['UX/UI design for iOS & Android', 'Cross-platform app (React Native / Flutter)', 'Backend, APIs & admin panel', 'Push notifications', 'In-app payments & subscriptions', 'Analytics & crash reporting', 'App Store & Play Store launch', 'Store listing optimisation (ASO)'],
+  kpis: [
+    { metric: 'Installs', why: 'How many people download the app.' },
+    { metric: 'Activation rate', why: 'Installs that finish onboarding and use the core feature.' },
+    { metric: 'Day-7 / Day-30 retention', why: 'Whether people keep coming back.' },
+    { metric: 'Crash-free sessions', why: 'We target 99.5%+ so reviews stay positive.' },
+    { metric: 'Store rating', why: 'Ratings drive rankings and downloads.' },
+    { metric: 'Revenue per user', why: 'For paid, subscription or commerce apps.' },
+  ],
+  stay: {
+    headline: 'Launch is version 1.0 — we stay for 1.1, 1.2 and beyond.',
+    body: 'Apps need updates for every new iOS and Android release. Every launch includes a 30-day warranty, then an optional care plan keeps your app updated, secure and growing.',
+    timeline: [
+      { when: 'Weeks 1–16', title: 'Design, build, launch', body: 'A test build on your phone every week until it is live in both stores.' },
+      { when: 'Days 1–30 after launch', title: 'Free warranty', body: 'Bug fixes, crash fixes and store feedback handled free.' },
+      { when: 'Every month', title: 'Updates & monitoring', body: 'OS updates, security patches and performance checks (care plan from $75/mo).' },
+      { when: 'Every quarter', title: 'Feature roadmap', body: 'We review analytics with you and ship the next most valuable features.' },
+    ],
+  },
+  compare: [
+    { them: 'Separate iOS and Android teams', us: 'One cross-platform codebase, native feel' },
+    { them: 'You see the app at the end', us: 'A test build on your phone every week' },
+    { them: 'Store launch is "your job"', us: 'App Store & Play Store submission included' },
+    { them: 'Agency owns the code & accounts', us: 'Your developer accounts, your code' },
+    { them: 'No plan after launch', us: '30-day warranty + quarterly roadmap' },
+  ],
+  packages: [
+    { name: 'App MVP', price: 3000, for: 'Founders validating an idea fast', includes: ['Core feature set', 'iOS + Android', 'Simple backend', 'Analytics & crash reports', 'Store submission'] },
+    { name: 'Business App', price: 6000, for: 'Companies launching a serious product', includes: ['Everything in MVP', 'Custom UX/UI design', 'Payments & push notifications', 'Admin panel', 'ASO & store listing'], highlight: true },
+    { name: 'Scale App', price: 12500, for: 'Marketplaces, fintech and on-demand apps', includes: ['Everything in Business', 'Real-time features & chat', 'Advanced security & roles', 'Integrations & AI features', 'Quarterly roadmap'] },
+  ],
+  priceNote: 'Starting prices, one-time. Your exact fixed price is confirmed in writing within 48 hours.',
+  faqs: [
+    { q: 'How much does it cost to build a mobile app?', a: 'An app MVP starts at $3,000, a full business app at $6,000 and complex marketplace or fintech apps at $12,500. Every project is a fixed written price.' },
+    { q: 'How long does it take to build an app?', a: 'Most apps launch in 8–16 weeks. You get a test build on your own phone every week.' },
+    { q: 'Do you build for both iPhone and Android?', a: 'Yes. We build one cross-platform codebase with React Native or Flutter that runs natively on iOS and Android.' },
+    { q: 'Will you publish the app to the App Store and Google Play?', a: 'Yes. Store submission, listing copy, screenshots and handling review feedback are included.' },
+    { q: 'What happens after the app is live?', a: 'You get a 30-day free warranty. After that, optional care plans from $75/month cover OS updates, security and new features.' },
+  ],
+  cta: { title: 'Got an app idea? Let’s ship it.', sub: 'Book a free call — get an app blueprint and fixed price within 48 hours.' },
+});
 
 export const landingBySlug = (slug: string) => landings.find(l => l.slug === slug);

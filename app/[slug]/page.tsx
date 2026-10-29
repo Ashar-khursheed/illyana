@@ -4,6 +4,7 @@ import { LandingPage } from '@/components/landing/LandingPage';
 import { landingBySlug, landings } from '@/lib/landings';
 import { site } from '@/lib/site';
 import '../landing.css';
+import '../showcase.css';
 
 type Props = { params: Promise<{ slug: string }> };
 

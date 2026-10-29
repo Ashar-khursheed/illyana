@@ -65,7 +65,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .cursor.is-label .cursor__label { opacity: 1; }
 .cursor.is-label .cursor__dot { opacity: 0; }
 @media (hover: none), (pointer: coarse) { .cursor { display: none; } }
-@media (hover: hover) and (pointer: fine) { body, a, button { cursor: none; } input, textarea { cursor: text; } }
+@media (hover: hover) and (pointer: fine) { .has-cursor body, .has-cursor a, .has-cursor button { cursor: none; } input, textarea { cursor: text; } }
 
 /* ---------- Grain ---------- */
 .grain {
@@ -349,7 +349,8 @@ details p { color: var(--muted); padding: 0 56px 28px 0; max-width: 620px; }
 .biglink:hover { color: var(--accent); }
 
 /* ---------- Footer ---------- */
-.footer { padding: 0 var(--gutter) 32px; overflow: hidden; }
+/* Bottom space keeps the last row clear of the floating chat mascot. */
+.footer { padding: 0 var(--gutter) 128px; overflow: hidden; }
 .footer__big { font-size: clamp(100px, 30vw, 520px); font-weight: 600; letter-spacing: -.08em; line-height: .78; text-align: center; color: var(--bg-2); -webkit-text-stroke: 1px var(--line); user-select: none; margin-bottom: 40px; }
 .footer__row { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 24px; color: var(--muted); }
 .footer__links { display: flex; gap: 24px; font-size: 14px; }

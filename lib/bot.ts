@@ -36,12 +36,15 @@ const has = (text: string, words: string[]) =>
 
 // Order matters: more specific project types are checked first ("web app" before "app", etc.).
 const SERVICE_WORDS: [string, string[]][] = [
+  ['ecomgrowth', ['ecommerce marketing', 'e-commerce marketing', 'store marketing', 'shopify marketing', 'marketing for my store', 'more sales', 'increase sales', 'online sales', 'abandoned cart', 'google shopping']],
+  ['ads', ['ads', 'google ads', 'facebook ads', 'meta ads', 'instagram ads', 'tiktok ads', 'ppc', 'ad campaign', 'paid ads', 'advertising']],
+  ['social', ['social media', 'instagram', 'tiktok', 'facebook page', 'linkedin', 'content creation', 'posts']],
   ['landing', ['landing page', 'landing', 'one page', 'one-page', 'single page']],
   ['ai', ['ai', 'chatbot', 'chat bot', 'bot', 'automation', 'automate', 'gpt', 'llm', 'machine learning', 'agent']],
   ['ecommerce', ['ecommerce', 'e-commerce', 'online store', 'store', 'shop', 'shopify', 'woocommerce', 'sell online', 'marketplace']],
   ['webapp', ['web app', 'webapp', 'saas', 'portal', 'dashboard', 'crm', 'erp', 'software', 'platform', 'mvp', 'booking system', 'management system']],
   ['brand', ['logo', 'brand', 'branding', 'identity', 'ui', 'ux', 'ui/ux', 'figma', 'graphic design', 'ui design', 'ux design']],
-  ['growth', ['seo', 'marketing', 'ads', 'growth', 'ranking', 'google ranking', 'traffic', 'social media', 'leads']],
+  ['growth', ['seo', 'marketing', 'digital marketing', 'growth', 'ranking', 'google ranking', 'traffic', 'leads']],
   ['care', ['maintenance', 'maintain', 'care plan', 'support plan', 'retainer']],
   ['mobile', ['mobile app', 'mobile', 'app', 'apps', 'android', 'ios', 'iphone', 'flutter', 'react native', 'play store', 'app store']],
   ['cloud', ['cloud', 'devops', 'hosting', 'server', 'servers', 'kubernetes', 'deployment', 'infrastructure', 'ci/cd']],

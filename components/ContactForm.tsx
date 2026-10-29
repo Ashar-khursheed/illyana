@@ -1,12 +1,19 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { CONTACT_EMAIL, needs } from '@/lib/content';
 
 // Opens the visitor's mail client with the brief. Swap for an API route / form service to capture leads.
-export function ContactForm() {
+export function ContactForm({ source = 'Home page' }: { source?: string }) {
   const [invalid, setInvalid] = useState<Record<string, boolean>>({});
   const [sent, setSent] = useState(false);
+  // Ad attribution: keep utm_* / gclid / fbclid so every brief shows which campaign it came from.
+  const [tracking, setTracking] = useState('');
+  useEffect(() => {
+    const q = new URLSearchParams(location.search);
+    setTracking(['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid']
+      .filter(k => q.get(k)).map(k => `${k}=${q.get(k)}`).join(' · '));
+  }, []);
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,7 +27,7 @@ export function ContactForm() {
     setInvalid(errors);
     if (Object.values(errors).some(Boolean)) return;
 
-    const body = `Name: ${get('name')}\nEmail: ${get('email')}\nCompany: ${get('company') || '—'}\nNeeds: ${d.getAll('need').join(', ') || '—'}\n\n${get('message')}`;
+    const body = `Name: ${get('name')}\nEmail: ${get('email')}\nCompany: ${get('company') || '—'}\nNeeds: ${d.getAll('need').join(', ') || '—'}\nPage: ${source}${tracking ? `\nCampaign: ${tracking}` : ''}\n\n${get('message')}`;
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('New project brief — ' + get('name'))}&body=${encodeURIComponent(body)}`;
     setSent(true);
   };

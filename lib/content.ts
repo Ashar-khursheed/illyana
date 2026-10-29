@@ -1,3 +1,5 @@
+import { formatUSD, priceById } from './knowledge';
+
 export const CONTACT_EMAIL = 'hello@ilyanadigital.com';
 
 export const navLinks = [
@@ -69,11 +71,22 @@ export const sectors = [
 
 export const stack = ['React', 'Next.js', 'Node.js', 'TypeScript', 'Python', 'Flutter', 'React Native', 'PostgreSQL', 'AWS', 'OpenAI', 'Anthropic', 'Kubernetes', 'Figma', 'Shopify'];
 
+const fromPrice = (id: string) => {
+  const p = priceById(id)!;
+  return `${formatUSD(p.from)}–${formatUSD(p.to)}`;
+};
+
+// Phrased the way people ask Google and AI assistants, so answer engines can quote them directly.
 export const faqs = [
-  { q: 'How much does a project cost?', a: "Every project is quoted as a fixed price after a short discovery call. You'll receive a written proposal with scope, timeline and milestone payments within 48 hours — no hourly meter running." },
+  { q: 'How much does a website cost with Ilyana Digital?', a: `A business website typically costs ${fromPrice('business')}, a landing page ${fromPrice('landing')} and an e-commerce store ${fromPrice('ecommerce')}. Every project gets a fixed written quote within 48 hours of a free discovery call — no hourly billing.` },
+  { q: 'How much does it cost to build a mobile app?', a: `A cross-platform iOS and Android app typically costs ${fromPrice('mobile')} and takes 8–16 weeks. A web app or SaaS MVP typically costs ${fromPrice('webapp')}.` },
+  { q: 'How long does it take to build a website or app?', a: 'A landing page takes 1–2 weeks, a business website 3–6 weeks, an e-commerce store 4–10 weeks and a web or mobile app 8–16 weeks. You see a live demo every week.' },
+  { q: 'Can you build an AI chatbot or automation for my business?', a: `Yes. We build custom AI assistants, document Q&A, voice and vision tools and workflow automation, typically ${fromPrice('ai')} depending on integrations.` },
+  { q: 'Do you offer business partnerships, revenue share or equity deals?', a: 'Yes. Beyond building, we can run the digital side of your business: Build & Run for one monthly fee, revenue share with lower upfront cost on selected projects, or joining as your technical co-founder for equity. Terms are agreed in writing after a discovery call.' },
   { q: 'Who owns the code and design?', a: 'You do — 100%. All source code, designs and intellectual property transfer to you as each milestone is paid. Repositories and cloud accounts live under your organisation.' },
   { q: 'How do you keep me updated?', a: "A live demo every week, a shared project board, a dedicated channel with your team and a written weekly report. You'll always know exactly where things stand." },
   { q: 'What happens after launch?', a: 'Every launch includes a 30-day free warranty for bugs. After that, you can choose a care plan with guaranteed response times — or take everything in-house. No lock-in.' },
+  { q: 'Which technologies do you use?', a: 'React, Next.js, Node.js and TypeScript for the web; React Native, Flutter, Swift and Kotlin for mobile; OpenAI and Anthropic models for AI; and AWS, Google Cloud, Azure and Kubernetes for infrastructure.' },
   { q: 'Do you work with international clients?', a: 'Yes. We work remotely with clients across time zones and keep at least four hours of daily overlap with your working day.' },
 ];
 

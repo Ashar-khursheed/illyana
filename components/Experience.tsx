@@ -215,6 +215,8 @@ export function Experience() {
 
       // ---------- Cursor, magnetic buttons, tilt ----------
       if (fine) {
+        root.classList.add('has-cursor');
+        cleanups.push(() => root.classList.remove('has-cursor'));
         const cur = $('.cursor')!;
         const label = $('.cursor__label')!;
         const dx = gsap.quickTo('.cursor__dot', 'x', { duration: .1 });

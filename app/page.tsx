@@ -6,6 +6,8 @@ import { HeroField } from '@/components/HeroField';
 import { ContactForm } from '@/components/ContactForm';
 import { Experience } from '@/components/Experience';
 import { ChatWidget } from '@/components/chat/ChatWidget';
+import { StructuredData } from '@/components/StructuredData';
+import { landings } from '@/lib/landings';
 import {
   CONTACT_EMAIL, faqs, future, manifesto, marqueeItems, partnership, pillars, sectors, services, stack, stats, steps,
 } from '@/lib/content';
@@ -36,7 +38,7 @@ export default function Home() {
           <HeroField />
           <div className="hero__inner">
             <p className="eyebrow mono reveal-up"><span className="tick" />Ilyana Digital Pvt Ltd — Product &amp; AI Studio</p>
-            <h1 className="hero__title">
+            <h1 className="hero__title" aria-label="We engineer digital products for the next decade.">
               <span className="line"><Chars text="We engineer" /></span>
               <span className="line"><Chars text="digital products" /></span>
               <span className="line"><Chars text="for the" /> <em className="serif"><Chars text="next decade." /></em></span>
@@ -251,14 +253,15 @@ export default function Home() {
       <footer className="footer">
         <div className="footer__big" aria-hidden="true">ilyana</div>
         <div className="footer__row">
-          <span className="mono">© {new Date().getFullYear()} Ilyana Digital Pvt Ltd. All rights reserved.</span>
+          <span className="mono">© {new Date().getFullYear()} Ilyana Digital Pvt Ltd · <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></span>
           <nav className="footer__links">
-            <a href="#services">Services</a><a href="#method">Method</a><a href="#guarantees">Guarantees</a><a href="#contact">Contact</a>
+            {landings.map(l => <a key={l.slug} href={`/${l.slug}`}>{l.nav}</a>)}<a href="#contact">Contact</a>
           </nav>
           <a href="#top" className="mono totop" data-magnetic>Back to top ↑</a>
         </div>
       </footer>
 
+      <StructuredData />
       <ChatWidget />
       <Experience />
     </>

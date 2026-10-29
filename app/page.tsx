@@ -5,6 +5,7 @@ import { Nav } from '@/components/Nav';
 import { HeroField } from '@/components/HeroField';
 import { ContactForm } from '@/components/ContactForm';
 import { Experience } from '@/components/Experience';
+import { ChatWidget } from '@/components/chat/ChatWidget';
 import {
   CONTACT_EMAIL, faqs, future, manifesto, marqueeItems, pillars, sectors, services, stack, stats, steps,
 } from '@/lib/content';
@@ -25,6 +26,7 @@ export default function Home() {
         <div className="cursor__dot" />
       </div>
       <div className="grain" aria-hidden="true" />
+      <div className="spine" aria-hidden="true"><div className="spine__fill" /><div className="spine__head" /></div>
 
       <Nav />
 
@@ -213,6 +215,7 @@ export default function Home() {
         </div>
       </footer>
 
+      <ChatWidget />
       <Experience />
     </>
   );

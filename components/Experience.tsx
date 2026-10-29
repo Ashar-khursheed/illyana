@@ -86,17 +86,43 @@ export function Experience() {
         scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true },
       });
 
-      // ---------- Nav state ----------
+      // ---------- Nav state (always visible; gains a backdrop once scrolled) ----------
       const nav = $('.nav')!;
-      let lastY = 0;
       ScrollTrigger.create({
         start: 0, end: 'max',
-        onUpdate: self => {
-          const y = self.scroll();
-          nav.classList.toggle('is-scrolled', y > 40);
-          nav.classList.toggle('is-hidden', y > lastY && y > 400 && !root.classList.contains('menu-open'));
-          lastY = y;
-        },
+        onUpdate: self => nav.classList.toggle('is-scrolled', self.scroll() > 40),
+      });
+
+      // ---------- Scroll spine: fills top→bottom, lighting a node as each section is reached ----------
+      const spine = $('.spine')!;
+      const fill = $('.spine__fill')!;
+      const head = $('.spine__head')!;
+      const nodes = $$('main > section, .footer').map(section => {
+        const el = document.createElement('i');
+        el.className = 'spine__node';
+        spine.appendChild(el);
+        return { section, el, p: 0 };
+      });
+      const placeNodes = () => {
+        const max = ScrollTrigger.maxScroll(window) || 1;
+        nodes.forEach(n => {
+          const top = n.section.getBoundingClientRect().top + window.scrollY;
+          n.p = gsap.utils.clamp(0, 1, (top - window.innerHeight * 0.5) / max);
+          n.el.style.top = `${n.p * 100}%`;
+        });
+      };
+      const paintSpine = (p: number) => {
+        gsap.set(fill, { scaleY: p });
+        gsap.set(head, { y: p * spine.clientHeight });
+        nodes.forEach(n => n.el.classList.toggle('is-on', p >= n.p - 0.002));
+      };
+      const spineST = ScrollTrigger.create({ start: 0, end: 'max', onUpdate: s => paintSpine(s.progress) });
+      // Global 'refresh' fires after every trigger (incl. the services pin spacer) has re-measured.
+      const onRefresh = () => { placeNodes(); paintSpine(spineST.progress); };
+      ScrollTrigger.addEventListener('refresh', onRefresh);
+      cleanups.push(() => {
+        ScrollTrigger.removeEventListener('refresh', onRefresh);
+        nodes.forEach(n => n.el.remove());
       });
 
       // ---------- Marquee skew with velocity ----------

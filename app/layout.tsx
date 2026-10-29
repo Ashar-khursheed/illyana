@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import './chat.css';
 
 // Self-hosted so builds never depend on reaching Google Fonts.
 const sans = localFont({ src: './fonts/inter-tight.woff2', weight: '100 900', variable: '--font-sans', display: 'swap' });

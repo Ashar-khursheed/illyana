@@ -1,0 +1,79 @@
+export const CONTACT_EMAIL = 'hello@ilyanadigital.com';
+
+export const navLinks = [
+  { href: '#services', label: 'Services' },
+  { href: '#method', label: 'Method' },
+  { href: '#guarantees', label: 'Guarantees' },
+  { href: '#sectors', label: 'Sectors' },
+  { href: '#faq', label: 'FAQ' },
+];
+
+export const marqueeItems = ['Web Platforms', 'Mobile Apps', 'AI Agents', 'Brand Systems', 'Cloud & DevOps', 'Growth Engineering'];
+
+export const manifesto =
+  'Most agencies sell hours. We sell outcomes. Every project starts with a fixed scope, a fixed price and a named senior team — then we ship working software to you every single week, until it is exactly right.';
+
+export type IconName = 'web' | 'mobile' | 'ai' | 'brand' | 'cloud' | 'growth';
+
+export const services: { icon: IconName; title: string; body: string; tags: string[]; accent?: boolean }[] = [
+  { icon: 'web', title: 'Web Platforms', body: 'High-performance websites, SaaS products and portals. Core Web Vitals in the green, accessible by default, built to scale.', tags: ['Next.js / React', 'Headless CMS', 'E-commerce'] },
+  { icon: 'mobile', title: 'Mobile Apps', body: 'Native-quality iOS and Android apps from one codebase — offline-ready, store-compliant and instrumented from day one.', tags: ['React Native', 'Flutter', 'Swift / Kotlin'] },
+  { icon: 'ai', title: 'AI & Automation', body: 'LLM agents, copilots, document intelligence and workflow automation that remove real hours from your operations — measured, not hyped.', tags: ['RAG & Agents', 'Voice / Vision', 'Process automation'], accent: true },
+  { icon: 'brand', title: 'Brand & Product Design', body: 'Identity systems, UX research and design systems that make complex products feel effortless and look unmistakably yours.', tags: ['Identity', 'UX / UI', 'Design systems'] },
+  { icon: 'cloud', title: 'Cloud & DevOps', body: 'Infrastructure as code, CI/CD, observability and security hardening — so your product stays up while your bills stay down.', tags: ['AWS / GCP / Azure', 'Kubernetes', 'SRE'] },
+  { icon: 'growth', title: 'Growth Engineering', body: 'SEO, analytics, conversion experiments and performance marketing wired directly into the product — growth you can attribute.', tags: ['Technical SEO', 'CRO', 'Analytics'] },
+];
+
+export const steps = [
+  { when: '01 — Week 0', title: 'Discovery sprint', body: 'Workshops, technical audit and user research. You receive a written blueprint, clickable prototype and a fixed quote within 48 hours of sign-off.' },
+  { when: '02 — Week 1–2', title: 'Design & architecture', body: 'Design system, system architecture and security model reviewed with you before a single production line is written.' },
+  { when: '03 — Weekly', title: 'Build in the open', body: 'Two-week sprints with a live demo every week, a shared roadmap board and staging links you can click any time.' },
+  { when: '04 — Launch', title: 'Ship & harden', body: 'Load testing, security review, accessibility audit and a zero-downtime launch — with your team trained on everything.' },
+  { when: '05 — Forever', title: 'Evolve', body: '30-day warranty, then optional care plans with response-time SLAs, monthly reports and a roadmap that keeps you ahead.' },
+];
+
+export const stats = [
+  { value: 100, unit: '%', label: 'Source code & IP ownership transferred to you' },
+  { value: 48, unit: 'h', label: 'From discovery call to fixed written proposal' },
+  { value: 30, unit: 'd', label: 'Free bug-fix warranty after every launch' },
+  { value: 4, unit: 'h', label: 'Maximum response time on business days' },
+];
+
+export const pillars = [
+  { title: 'Fixed scope, fixed price', body: "You know the final number before work starts. If we under-estimate, that's on us — not on your invoice." },
+  { title: 'Senior-only team', body: 'No bait-and-switch. The people on your kickoff call are the people who build your product — named in the contract.' },
+  { title: 'Pay per milestone', body: "Payments are tied to delivered, demo-ed milestones. You only pay for work you've seen running." },
+  { title: 'NDA on day one', body: 'Your idea is protected before you tell us anything. Signed mutual NDA within hours, not days.' },
+  { title: 'Exit without lock-in', body: 'Documented code, your own cloud accounts, your own repositories. Leave any time with everything you paid for.' },
+  { title: 'Security by default', body: 'OWASP-aligned reviews, encrypted secrets, least-privilege access and audit logs on every project — not an upsell.' },
+  { title: 'Radical transparency', body: 'Live project board, weekly written reports and time-stamped decisions. You never have to ask "what\'s happening?"' },
+  { title: 'Performance budget', body: 'Every web build ships with a Lighthouse performance target agreed upfront — and we fix it free if we miss it.' },
+];
+
+export const future = [
+  { tag: 'AI-native', body: 'Every product is designed for AI copilots, agents and automation from the first sketch.' },
+  { tag: 'Edge-fast', body: 'Edge rendering and global CDNs for sub-second loads on any network, any continent.' },
+  { tag: 'Composable', body: 'Modular, API-first architecture — swap any piece without rebuilding everything.' },
+  { tag: 'Accessible', body: 'WCAG 2.2 AA as a baseline, so your product works for everyone and every regulator.' },
+];
+
+export const sectors = [
+  { title: 'Fintech & Payments', body: 'Wallets, lending, compliance dashboards' },
+  { title: 'Healthcare', body: 'Telehealth, patient portals, clinical AI' },
+  { title: 'Retail & E-commerce', body: 'Headless stores, B2B ordering, loyalty' },
+  { title: 'Logistics', body: 'Fleet tracking, dispatch, warehouse tools' },
+  { title: 'Real Estate & PropTech', body: 'Listings, CRM, virtual tours' },
+  { title: 'Education', body: 'LMS, assessment engines, AI tutors' },
+];
+
+export const stack = ['React', 'Next.js', 'Node.js', 'TypeScript', 'Python', 'Flutter', 'React Native', 'PostgreSQL', 'AWS', 'OpenAI', 'Anthropic', 'Kubernetes', 'Figma', 'Shopify'];
+
+export const faqs = [
+  { q: 'How much does a project cost?', a: "Every project is quoted as a fixed price after a short discovery call. You'll receive a written proposal with scope, timeline and milestone payments within 48 hours — no hourly meter running." },
+  { q: 'Who owns the code and design?', a: 'You do — 100%. All source code, designs and intellectual property transfer to you as each milestone is paid. Repositories and cloud accounts live under your organisation.' },
+  { q: 'How do you keep me updated?', a: "A live demo every week, a shared project board, a dedicated channel with your team and a written weekly report. You'll always know exactly where things stand." },
+  { q: 'What happens after launch?', a: 'Every launch includes a 30-day free warranty for bugs. After that, you can choose a care plan with guaranteed response times — or take everything in-house. No lock-in.' },
+  { q: 'Do you work with international clients?', a: 'Yes. We work remotely with clients across time zones and keep at least four hours of daily overlap with your working day.' },
+];
+
+export const needs = ['Web platform', 'Mobile app', 'AI & automation', 'Brand & design', 'Cloud & DevOps', 'Growth'];

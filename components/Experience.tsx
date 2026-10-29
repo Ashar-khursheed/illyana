@@ -136,7 +136,7 @@ export function Experience() {
       });
 
       // ---------- Generic reveals ----------
-      $$('.section .label, .h2, .g__sub, .pillar, .stat, .future__item, .sector-list li, details, .contact__aside > div, .form > *')
+      $$('.section .label, .h2, .g__sub, .pillar, .stat, .future__item, .sector-list li, details, .contact__aside > div, .form > *, .pt-lede, .pt-model, .pt-runs, .pt-cta')
         .forEach(el => el.setAttribute('data-reveal', ''));
       ScrollTrigger.batch('[data-reveal]', {
         start: 'top 88%',
@@ -179,6 +179,18 @@ export function Experience() {
           trigger: el, start: 'top 90%', once: true,
           onEnter: () => gsap.to(o, { v: Number(el.dataset.count), duration: 2, ease: 'power3.out', onUpdate: () => { el.textContent = String(Math.round(o.v)); } }),
         });
+      });
+
+      // ---------- Partnership equation: the two sides slide together, then the result lands ----------
+      $$('.pt-row').forEach(row => {
+        gsap.timeline({ scrollTrigger: { trigger: row, start: 'top 85%', once: true }, defaults: { ease: 'expo.out', duration: 1.2 } })
+          .from(row.querySelector('.pt-side--you'), { xPercent: -30, opacity: 0 })
+          .from(row.querySelector('.pt-side--us'), { xPercent: 30, opacity: 0 }, 0)
+          .from(row.querySelector('.pt-plus'), { scale: 0, rotate: -180, duration: 1 }, .25);
+      });
+      gsap.from('.pt-result', {
+        y: 40, opacity: 0, scale: .96, duration: 1.2, ease: 'expo.out',
+        scrollTrigger: { trigger: '.pt-result', start: 'top 90%', once: true },
       });
 
       // ---------- Statement lines ----------
@@ -231,7 +243,7 @@ export function Experience() {
           on(el, 'mouseleave', () => { xTo(0); yTo(0); });
         });
 
-        $$('.card, .pillar').forEach(el => {
+        $$('.card, .pillar, .pt-model').forEach(el => {
           on(el, 'mousemove', (e: MouseEvent) => {
             const r = el.getBoundingClientRect();
             const px = (e.clientX - r.left) / r.width - .5;

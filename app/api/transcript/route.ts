@@ -27,7 +27,7 @@ function parse(raw: unknown): Payload | null {
   if (!Array.isArray(p.messages) || p.messages.length === 0) return null;
   const messages = p.messages.slice(0, MAX_MESSAGES).map((m: any) => ({
     from: m?.from === 'user' ? 'user' : 'bot',
-    text: clean(m?.text),
+    text: clean(m?.text).replace(/\*\*/g, ''),
     at: Number(m?.at) || Date.now(),
   })) as Line[];
   if (!messages.some(m => m.from === 'user')) return null;

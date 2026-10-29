@@ -26,9 +26,10 @@ export const CHIPS = {
   human: 'Talk to a human',
   process: 'How do you work?',
   payment: 'How do payments work?',
+  partner: 'Can we partner?',
 };
 
-const START_CHIPS = [CHIPS.estimate, CHIPS.services, CHIPS.trust, CHIPS.human];
+const START_CHIPS = [CHIPS.estimate, CHIPS.services, CHIPS.partner, CHIPS.human];
 
 const has = (text: string, words: string[]) =>
   words.reduce((n, w) => n + (new RegExp(`(^|[^a-z])${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}([^a-z]|$)`).test(text) ? 1 : 0), 0);
@@ -51,6 +52,7 @@ const INTENTS: Record<string, string[]> = {
   greet: ['hi', 'hello', 'hey', 'hiya', 'good morning', 'good evening', 'salam', 'assalam', 'yo'],
   thanks: ['thanks', 'thank you', 'thx', 'appreciate', 'great', 'awesome', 'perfect', 'cool'],
   bye: ['bye', 'goodbye', 'see you', 'that is all', "that's all", 'nothing else'],
+  partnership: ['partner', 'partners', 'partnership', 'equity', 'revenue share', 'co-founder', 'cofounder', 'technical founder', 'invest', 'investment', 'investor', 'run my business', 'run the business', 'joint venture', 'long term', 'long-term', 'together'],
   cheap: ['cheap', 'cheaper', 'discount', 'low budget', 'small budget', 'tight budget', 'affordable', 'lower price', 'budget is low', 'budget is tight', 'limited budget', 'not much budget', 'low cost'],
   pricing: ['price', 'pricing', 'cost', 'costs', 'how much', 'rate', 'rates', 'budget', 'quote', 'estimate', 'charge', 'charges', 'fee', 'fees', 'expensive', 'afford', '$', 'usd', 'dollars'],
   timeline: ['how long', 'timeline', 'deadline', 'weeks', 'days', 'months', 'how fast', 'urgent', 'asap', 'quickly', 'turnaround', 'when can'],
@@ -138,6 +140,11 @@ export function reply(input: string, ctx: BotContext): BotReply {
   }
 
   switch (intent) {
+    case 'partnership':
+      return {
+        text: "Yes — we don't just build websites, **we help run your business**. Your idea, our effort. Your investment, our work.\nPartnership options:\n- **Build & Run:** we build it and keep it running — tech, hosting, marketing, support — for one monthly fee\n- **Revenue share:** lower upfront cost for a share of what the product earns (selected projects)\n- **Tech co-founder:** for the right founders, our team joins for equity\nEvery partnership is tailored and agreed in writing after a free discovery call. Want to discuss your idea?",
+        chips: [CHIPS.human, CHIPS.estimate, CHIPS.trust],
+      };
     case 'cheap':
       return {
         text: "Working with a tighter budget is very common. We usually suggest:\n- Start with a focused **MVP or landing page** and grow in phases\n- Use a proven CMS or Shopify instead of fully custom\n- Pay per milestone, so you only pay for what you've seen working\nWant a quick estimate to see where you'd start?",

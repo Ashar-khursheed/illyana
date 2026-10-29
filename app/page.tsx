@@ -7,7 +7,7 @@ import { ContactForm } from '@/components/ContactForm';
 import { Experience } from '@/components/Experience';
 import { ChatWidget } from '@/components/chat/ChatWidget';
 import {
-  CONTACT_EMAIL, faqs, future, manifesto, marqueeItems, pillars, sectors, services, stack, stats, steps,
+  CONTACT_EMAIL, faqs, future, manifesto, marqueeItems, partnership, pillars, sectors, services, stack, stats, steps,
 } from '@/lib/content';
 
 const pad = (n: number) => String(n).padStart(2, '0');
@@ -140,6 +140,50 @@ export default function Home() {
           </div>
         </section>
 
+        {/* PARTNERSHIP */}
+        <section className="partner section" id="partnership">
+          <div className="pt-head">
+            <p className="label mono">[ 06 ] Partnership</p>
+            <h2 className="h2">{partnership.title}<br /><em className="serif">{partnership.accent}</em></h2>
+            <p className="pt-lede">{partnership.lede}</p>
+          </div>
+
+          <div className="pt-eq" aria-label="Your idea plus our effort, your investment plus our work, equals a business we grow together">
+            {partnership.equation.map(row => (
+              <div key={row.you} className="pt-row">
+                <div className="pt-side pt-side--you"><span className="mono">You bring</span><b>{row.you}</b></div>
+                <i className="pt-plus" aria-hidden="true">+</i>
+                <div className="pt-side pt-side--us"><span className="mono">We bring</span><b>{row.us}</b></div>
+              </div>
+            ))}
+            <div className="pt-result">
+              <i className="pt-equals" aria-hidden="true">=</i>
+              <b>{partnership.result}</b>
+            </div>
+          </div>
+
+          <div className="pt-models">
+            {partnership.models.map((m, i) => (
+              <article key={m.tag} className="pt-model">
+                <span className="pt-model__n mono">{pad(i + 1)} · {m.tag}</span>
+                <h3>{m.title}</h3>
+                <p>{m.body}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="pt-foot">
+            <div className="pt-runs">
+              <span className="mono">What we run for you</span>
+              <ul>{partnership.runs.map(r => <li key={r}>{r}</li>)}</ul>
+            </div>
+            <div className="pt-cta">
+              <a href="#contact" className="btn" data-magnetic data-cursor="Partner">Become a partner <span className="arrow">→</span></a>
+              <p className="mono">{partnership.note}</p>
+            </div>
+          </div>
+        </section>
+
         {/* STATEMENT */}
         <section className="statement">
           <div className="statement__inner">
@@ -156,7 +200,7 @@ export default function Home() {
 
         {/* SECTORS */}
         <section className="sectors section" id="sectors">
-          <p className="label mono">[ 06 ] Sectors we build for</p>
+          <p className="label mono">[ 07 ] Sectors we build for</p>
           <ul className="sector-list">
             {sectors.map((s, i) => (
               <li key={s.title} data-cursor="View"><span className="mono">{pad(i + 1)}</span><h3>{s.title}</h3><p>{s.body}</p></li>
@@ -174,7 +218,7 @@ export default function Home() {
         {/* FAQ */}
         <section className="faq section" id="faq">
           <div className="faq__head">
-            <p className="label mono">[ 07 ] Straight answers</p>
+            <p className="label mono">[ 08 ] Straight answers</p>
             <h2 className="h2">Questions,<br /><em className="serif">answered honestly.</em></h2>
           </div>
           <div className="faq__list">

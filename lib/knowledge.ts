@@ -14,16 +14,16 @@ export type PriceItem = {
 };
 
 export const pricing: PriceItem[] = [
-  { id: 'landing', label: 'Landing page', from: 1500, to: 4000, weeks: '1–2 weeks', note: 'Conversion-focused single page, animations, analytics, SEO basics.' },
-  { id: 'business', label: 'Business website', from: 4000, to: 12000, weeks: '3–6 weeks', note: '5–15 custom pages, headless CMS, blog, performance budget.' },
-  { id: 'ecommerce', label: 'E-commerce store', from: 6000, to: 25000, weeks: '4–10 weeks', note: 'Shopify or headless store, payments, inventory, B2B pricing.' },
-  { id: 'webapp', label: 'Web app / SaaS', from: 15000, to: 60000, weeks: '8–16 weeks', note: 'Auth, dashboards, roles, billing, APIs, admin panel, cloud.' },
-  { id: 'mobile', label: 'Mobile app', from: 12000, to: 50000, weeks: '8–16 weeks', note: 'iOS + Android from one codebase, store launch, push, analytics.' },
-  { id: 'ai', label: 'AI chatbot / automation', from: 5000, to: 30000, weeks: '3–10 weeks', note: 'Custom assistants, document Q&A, workflow automation, integrations.' },
-  { id: 'brand', label: 'Brand & UI/UX design', from: 2000, to: 10000, weeks: '2–5 weeks', note: 'Logo, identity system, design system, UX research, prototypes.' },
-  { id: 'cloud', label: 'Cloud & DevOps setup', from: 3000, to: 15000, weeks: '2–6 weeks', note: 'Infrastructure as code, CI/CD, monitoring, security hardening, cost tuning.' },
-  { id: 'care', label: 'Care & maintenance', from: 300, to: 2000, unit: '/mo', weeks: 'ongoing', note: 'Updates, monitoring, backups, security patches, response SLAs.' },
-  { id: 'growth', label: 'SEO & growth', from: 800, to: 4000, unit: '/mo', weeks: 'ongoing', note: 'Technical SEO, content, conversion experiments, reporting.' },
+  { id: 'landing', label: 'Landing page', from: 750, to: 2000, weeks: '1–2 weeks', note: 'Conversion-focused single page, animations, analytics, SEO basics.' },
+  { id: 'business', label: 'Business website', from: 2000, to: 6000, weeks: '3–6 weeks', note: '5–15 custom pages, headless CMS, blog, performance budget.' },
+  { id: 'ecommerce', label: 'E-commerce store', from: 3000, to: 12500, weeks: '4–10 weeks', note: 'Shopify or headless store, payments, inventory, B2B pricing.' },
+  { id: 'webapp', label: 'Web app / SaaS', from: 7500, to: 30000, weeks: '8–16 weeks', note: 'Auth, dashboards, roles, billing, APIs, admin panel, cloud.' },
+  { id: 'mobile', label: 'Mobile app', from: 6000, to: 25000, weeks: '8–16 weeks', note: 'iOS + Android from one codebase, store launch, push, analytics.' },
+  { id: 'ai', label: 'AI chatbot / automation', from: 2500, to: 15000, weeks: '3–10 weeks', note: 'Custom assistants, document Q&A, workflow automation, integrations.' },
+  { id: 'brand', label: 'Brand & UI/UX design', from: 1000, to: 5000, weeks: '2–5 weeks', note: 'Logo, identity system, design system, UX research, prototypes.' },
+  { id: 'cloud', label: 'Cloud & DevOps setup', from: 1500, to: 7500, weeks: '2–6 weeks', note: 'Infrastructure as code, CI/CD, monitoring, security hardening, cost tuning.' },
+  { id: 'care', label: 'Care & maintenance', from: 150, to: 1000, unit: '/mo', weeks: 'ongoing', note: 'Updates, monitoring, backups, security patches, response SLAs.' },
+  { id: 'growth', label: 'SEO & growth', from: 400, to: 2000, unit: '/mo', weeks: 'ongoing', note: 'Technical SEO, content, conversion experiments, reporting.' },
 ];
 
 /** Project types offered in the in-chat estimator (one-off builds only). */

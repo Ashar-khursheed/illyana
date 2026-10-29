@@ -4,6 +4,7 @@ export const navLinks = [
   { href: '#services', label: 'Services' },
   { href: '#method', label: 'Method' },
   { href: '#guarantees', label: 'Guarantees' },
+  { href: '#partnership', label: 'Partnership' },
   { href: '#sectors', label: 'Sectors' },
   { href: '#faq', label: 'FAQ' },
 ];
@@ -77,3 +78,22 @@ export const faqs = [
 ];
 
 export const needs = ['Web platform', 'Mobile app', 'AI & automation', 'Brand & design', 'Cloud & DevOps', 'Growth'];
+
+export const partnership = {
+  title: "We don't just build your website.",
+  accent: 'We help run your business.',
+  lede:
+    "Most agencies hand over a website and disappear. Ilyana works as your long-term technology partner — we design, build, launch, market and operate the digital side of your business alongside you. Because when you grow, we grow.",
+  equation: [
+    { you: 'Your idea', us: 'Our effort' },
+    { you: 'Your investment', us: 'Our work' },
+  ],
+  result: 'A business we grow together',
+  models: [
+    { tag: 'Build & Run', title: 'We build it — and keep it running', body: 'Product, hosting, security, updates, marketing and support handled by one team for one predictable monthly partnership fee.' },
+    { tag: 'Revenue share', title: 'Lower upfront, shared success', body: 'For selected projects we reduce the upfront cost in exchange for a share of the revenue the product earns. We only win when you do.' },
+    { tag: 'Tech co-founder', title: 'Your technical co-founder', body: 'For the right founders, our senior team joins as your technology partner for equity — turning your idea into a company, not just an app.' },
+  ],
+  runs: ['Product & tech', 'Hosting & security', 'Marketing & SEO', 'Customer support tools', 'Analytics & growth', 'Continuous improvements'],
+  note: 'Every partnership is tailored. Terms are agreed in writing after a free discovery call.',
+};

@@ -34,6 +34,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
 .mono { font-family: var(--mono); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+/* The brand is always written "ilyana" — keep it lowercase even inside uppercase labels. */
+.nocase { text-transform: none; }
 .serif { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -.01em; }
 .label { color: var(--muted); margin-bottom: 20px; }
 .section { padding: clamp(56px, 7vw, 112px) var(--gutter); position: relative; }

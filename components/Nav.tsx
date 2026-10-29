@@ -18,7 +18,7 @@ export function Nav() {
   return (
     <>
       <header className="nav">
-        <a href="#top" className="brand" aria-label="Ilyana Digital home">
+        <a href="#top" className="brand" aria-label="ilyana Digital home">
           <LogoMark className="brand__mark" />
           <span className="brand__word">ilyana<em>digital</em></span>
         </a>

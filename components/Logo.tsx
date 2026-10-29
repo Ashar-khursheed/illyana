@@ -1,4 +1,4 @@
-/** "ia" monogram — the first and last letters of Ilyana; the i's dot carries the accent. */
+/** "ia" monogram — the first and last letters of ilyana; the i's dot carries the accent. */
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 80 80" fill="none" className={className} aria-hidden="true">

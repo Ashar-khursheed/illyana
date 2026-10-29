@@ -69,7 +69,7 @@ export function LandingPage({ l }: { l: Landing }) {
       <div className="grain" aria-hidden="true" />
 
       <header className="nav lp-nav is-scrolled">
-        <a href="/" className="brand" aria-label="Ilyana Digital home">
+        <a href="/" className="brand" aria-label="ilyana Digital home">
           <LogoMark className="brand__mark" />
           <span className="brand__word">ilyana<em>digital</em></span>
         </a>
@@ -180,10 +180,10 @@ export function LandingPage({ l }: { l: Landing }) {
 
         {/* COMPARE */}
         <section className="section lp-compare">
-          <p className="label mono" data-reveal>Why Ilyana</p>
-          <h2 className="h2" data-reveal>Typical agency vs. <em className="serif">Ilyana.</em></h2>
-          <div className="lp-table" role="table" aria-label="Typical agency compared with Ilyana">
-            <div className="lp-table__row lp-table__row--head" role="row"><span role="columnheader">Typical agency</span><span role="columnheader">Ilyana Digital</span></div>
+          <p className="label mono" data-reveal>Why <span className="nocase">ilyana</span></p>
+          <h2 className="h2" data-reveal>Typical agency vs. <em className="serif">ilyana.</em></h2>
+          <div className="lp-table" role="table" aria-label="Typical agency compared with ilyana">
+            <div className="lp-table__row lp-table__row--head" role="row"><span role="columnheader">Typical agency</span><span role="columnheader"><span className="nocase">ilyana</span> Digital</span></div>
             {l.compare.map(c => (
               <div key={c.us} className="lp-table__row" role="row" data-reveal>
                 <span role="cell" className="lp-no">{c.them}</span>
@@ -254,7 +254,7 @@ export function LandingPage({ l }: { l: Landing }) {
       <footer className="footer">
         <div className="footer__big" aria-hidden="true">ilyana</div>
         <div className="footer__row">
-          <span className="mono">© {new Date().getFullYear()} Ilyana Digital Pvt Ltd · <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></span>
+          <span className="mono">© {new Date().getFullYear()} <span className="nocase">ilyana</span> Digital Pvt Ltd · <a className="nocase" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></span>
           <nav className="footer__links" aria-label="Solutions">
             <a href="/">Home</a>
             {landings.filter(x => x.slug !== l.slug).map(x => <a key={x.slug} href={`/${x.slug}`}>{x.nav}</a>)}

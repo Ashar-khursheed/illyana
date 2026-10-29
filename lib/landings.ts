@@ -43,7 +43,7 @@ export const landings: Landing[] = [
       { title: 'The brand dies in a PDF', body: 'Agencies hand over guidelines and disappear. Six months later every new post and page drifts further from the brand you paid for.' },
     ],
     framework: {
-      name: 'The Ilyana Brand OS',
+      name: 'The ilyana Brand OS',
       intro: 'A four-stage system that turns who you are into how you look, sound and sell — and keeps it consistent as you grow.',
       phases: [
         { when: 'Week 1', title: 'Discover', actions: ['Founder & customer interviews', 'Competitor and category audit', 'Audience personas and buying triggers'], deliverable: 'Brand insight report' },
@@ -111,7 +111,7 @@ export const landings: Landing[] = [
       { title: 'Reports full of vanity metrics', body: 'Impressions and followers look nice. Cost per lead and revenue are what pay your bills — and most agencies avoid them.' },
     ],
     framework: {
-      name: 'The Ilyana Growth Loop',
+      name: 'The ilyana Growth Loop',
       intro: 'A 90-day plan that fixes tracking first, wins quick leads with ads, then compounds with SEO and content — so every month gets cheaper than the last.',
       phases: [
         { when: 'Days 1–14', title: 'Audit & track', actions: ['Full audit of website, ads, SEO and analytics', 'GA4, Google Tag Manager and conversion tracking', 'Competitor and keyword research'], deliverable: '90-day growth roadmap' },
@@ -179,7 +179,7 @@ export const landings: Landing[] = [
       { title: 'One-time buyers, no loyalty', body: 'Acquiring a new customer costs far more than keeping one. Most stores never set up post-purchase journeys.' },
     ],
     framework: {
-      name: 'The Ilyana Store Growth Engine',
+      name: 'The ilyana Store Growth Engine',
       intro: 'Fix the store, feed the ads, own the customer. A 90-day launch followed by a 12-month seasonal sales calendar.',
       phases: [
         { when: 'Days 1–14', title: 'Store & data audit', actions: ['Conversion audit of product, cart and checkout', 'Pixel, Conversions API and GA4 e-commerce tracking', 'Product feed clean-up for Google & Meta'], deliverable: 'Store growth roadmap' },
@@ -247,7 +247,7 @@ export const landings: Landing[] = [
       { title: 'Held hostage by your developer', body: 'No access to the code, no idea how to edit content, and a bill every time you change a sentence.' },
     ],
     framework: {
-      name: 'The Ilyana Launch Method',
+      name: 'The ilyana Launch Method',
       intro: 'From blank page to a fast, ranking, converting website in four clear stages — with a live demo every week.',
       phases: [
         { when: 'Week 1', title: 'Plan', actions: ['Goals, audience and competitor review', 'Sitemap and keyword plan for SEO', 'Content and conversion strategy'], deliverable: 'Site blueprint + fixed quote' },

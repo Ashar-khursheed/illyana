@@ -22,7 +22,7 @@ export const CHIPS = {
   estimate: 'Get a price estimate',
   services: 'What do you build?',
   timeline: 'How long does it take?',
-  trust: 'Why trust Ilyana?',
+  trust: 'Why trust ilyana?',
   human: 'Talk to a human',
   process: 'How do you work?',
   payment: 'How do payments work?',
@@ -98,7 +98,7 @@ const serviceBlurb = (id: string) => {
 };
 
 export const WELCOME: BotReply = {
-  text: "Hi, I'm **Ila** — Ilyana's project assistant. 👋\nI can explain what we build, give you a **price estimate in 3 taps**, or connect you with a senior lead.",
+  text: "Hi, I'm **Ila** — ilyana's project assistant. 👋\nI can explain what we build, give you a **price estimate in 3 taps**, or connect you with a senior lead.",
   chips: START_CHIPS,
 };
 
@@ -190,7 +190,7 @@ export function reply(input: string, ctx: BotContext): BotReply {
       };
     case 'about':
       return {
-        text: `**Ilyana Digital Pvt Ltd** is a senior-only product & AI studio. We build web platforms, mobile apps, AI systems and brands for clients worldwide, working remotely with at least 4 hours of overlap with your day. For office details or team specifics, a senior lead can share them directly — email **${CONTACT_EMAIL}**.`,
+        text: `**ilyana Digital Pvt Ltd** is a senior-only product & AI studio. We build web platforms, mobile apps, AI systems and brands for clients worldwide, working remotely with at least 4 hours of overlap with your day. For office details or team specifics, a senior lead can share them directly — email **${CONTACT_EMAIL}**.`,
         chips: [CHIPS.services, CHIPS.trust, CHIPS.human],
       };
     case 'portfolio':

@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-// Emails each finished chat to the Ilyana team over plain SMTP (free with e.g. a Gmail app password).
+// Emails each finished chat to the ilyana team over plain SMTP (free with e.g. a Gmail app password).
 export const runtime = 'nodejs';
 
 type Line = { from: 'bot' | 'user'; text: string; at: number };
@@ -86,7 +86,7 @@ export async function POST(req: Request) {
     const port = Number(SMTP_PORT) || 465;
     const transport = nodemailer.createTransport({ host: SMTP_HOST, port, secure: port === 465, auth: { user: SMTP_USER, pass: SMTP_PASS } });
     await transport.sendMail({
-      from: SMTP_FROM || `Ilyana Website <${SMTP_USER}>`,
+      from: SMTP_FROM || `ilyana Website <${SMTP_USER}>`,
       to: TRANSCRIPT_TO,
       replyTo: payload.visitor?.email || undefined,
       subject: `Website chat — ${who}`,

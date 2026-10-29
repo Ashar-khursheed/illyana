@@ -37,7 +37,7 @@ export default function Home() {
         <section className="hero">
           <HeroField />
           <div className="hero__inner">
-            <p className="eyebrow mono reveal-up"><span className="tick" />Ilyana Digital Pvt Ltd — Product &amp; AI Studio</p>
+            <p className="eyebrow mono reveal-up"><span className="tick" /><span><span className="nocase">ilyana</span> Digital Pvt Ltd — Product &amp; AI Studio</span></p>
             <h1 className="hero__title" aria-label="We engineer digital products for the next decade.">
               <span className="line"><Chars text="We engineer" /></span>
               <span className="line"><Chars text="digital products" /></span>
@@ -99,7 +99,7 @@ export default function Home() {
         {/* METHOD */}
         <section className="method section" id="method">
           <div className="method__head">
-            <p className="label mono">[ 04 ] The Ilyana Method</p>
+            <p className="label mono">[ 04 ] The <span className="nocase">ilyana</span> Method</p>
             <h2 className="h2">From first call to<br /><em className="serif">live product</em> — no surprises.</h2>
           </div>
           <div className="method__body">
@@ -253,7 +253,7 @@ export default function Home() {
       <footer className="footer">
         <div className="footer__big" aria-hidden="true">ilyana</div>
         <div className="footer__row">
-          <span className="mono">© {new Date().getFullYear()} Ilyana Digital Pvt Ltd · <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></span>
+          <span className="mono">© {new Date().getFullYear()} <span className="nocase">ilyana</span> Digital Pvt Ltd · <a className="nocase" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></span>
           <nav className="footer__links">
             {landings.map(l => <a key={l.slug} href={`/${l.slug}`}>{l.nav}</a>)}<a href="#contact">Contact</a>
           </nav>

@@ -68,7 +68,7 @@ export function StructuredData() {
     {
       '@type': 'HowTo',
       '@id': `${site.url}/#method`,
-      name: 'How Ilyana Digital delivers a project',
+      name: 'How ilyana Digital delivers a project',
       step: steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title, text: s.body })),
     },
   ];

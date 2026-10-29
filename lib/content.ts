@@ -78,7 +78,7 @@ const fromPrice = (id: string) => {
 
 // Phrased the way people ask Google and AI assistants, so answer engines can quote them directly.
 export const faqs = [
-  { q: 'How much does a website cost with Ilyana Digital?', a: `A business website typically costs ${fromPrice('business')}, a landing page ${fromPrice('landing')} and an e-commerce store ${fromPrice('ecommerce')}. Every project gets a fixed written quote within 48 hours of a free discovery call — no hourly billing.` },
+  { q: 'How much does a website cost with ilyana Digital?', a: `A business website typically costs ${fromPrice('business')}, a landing page ${fromPrice('landing')} and an e-commerce store ${fromPrice('ecommerce')}. Every project gets a fixed written quote within 48 hours of a free discovery call — no hourly billing.` },
   { q: 'How much does it cost to build a mobile app?', a: `A cross-platform iOS and Android app typically costs ${fromPrice('mobile')} and takes 8–16 weeks. A web app or SaaS MVP typically costs ${fromPrice('webapp')}.` },
   { q: 'How long does it take to build a website or app?', a: 'A landing page takes 1–2 weeks, a business website 3–6 weeks, an e-commerce store 4–10 weeks and a web or mobile app 8–16 weeks. You see a live demo every week.' },
   { q: 'Can you build an AI chatbot or automation for my business?', a: `Yes. We build custom AI assistants, document Q&A, voice and vision tools and workflow automation, typically ${fromPrice('ai')} depending on integrations.` },
@@ -96,7 +96,7 @@ export const partnership = {
   title: "We don't just build your website.",
   accent: 'We help run your business.',
   lede:
-    "Most agencies hand over a website and disappear. Ilyana works as your long-term technology partner — we design, build, launch, market and operate the digital side of your business alongside you. Because when you grow, we grow.",
+    "Most agencies hand over a website and disappear. ilyana works as your long-term technology partner — we design, build, launch, market and operate the digital side of your business alongside you. Because when you grow, we grow.",
   equation: [
     { you: 'Your idea', us: 'Our effort' },
     { you: 'Your investment', us: 'Our work' },

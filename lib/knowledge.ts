@@ -1,6 +1,6 @@
 /**
  * Starting price ranges the chatbot quotes. These are IDEAS — edit them to match what
- * Ilyana actually charges. The bot always presents them as "starting from" ranges and
+ * ilyana actually charges. The bot always presents them as "starting from" ranges and
  * says the final fixed price comes in a written proposal after a discovery call.
  */
 export type PriceItem = {

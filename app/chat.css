@@ -72,7 +72,7 @@
 .ila-body { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding: 18px 16px 8px; display: flex; flex-direction: column; gap: 14px; scroll-behavior: smooth; }
 .ila-body::-webkit-scrollbar { width: 6px; }
 .ila-body::-webkit-scrollbar-thumb { background: var(--line); border-radius: 6px; }
-.ila-msg { display: flex; flex-direction: column; gap: 8px; max-width: 88%; animation: ila-in .5s var(--ease) both; }
+.ila-msg { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; max-width: 88%; animation: ila-in .5s var(--ease) both; }
 .ila-msg--user { align-self: flex-end; align-items: flex-end; }
 .ila-text { padding: 11px 15px; border-radius: 20px 20px 20px 6px; background: #fff; border: 1px solid var(--line); font-size: 14.5px; line-height: 1.5; }
 .ila-text p + p, .ila-text p + ul, .ila-text ul + p { margin-top: 6px; }
